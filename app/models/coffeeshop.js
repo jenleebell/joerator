@@ -9,5 +9,7 @@ export default DS.Model.extend({
   hipsterRating: DS.attr(),
   reviews: DS.hasMany('review', { async: true }),
   created_at: DS.attr(),
-  edited_at: DS.attr()
+  edited_at: DS.attr(),
+  image_link: DS.attr(),
+  web_address: DS.attr()
 });

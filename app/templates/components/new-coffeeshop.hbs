@@ -1,0 +1,24 @@
+<div class="content-wrapper container">
+  <div class="title-container">
+    <h1>make a joe</h1>
+  </div>
+
+  <form>
+    <label for="name">name</label>
+    {{input value=name id="name" class="form-control"}}
+
+    <label for="address">address</label>
+    {{input value=address id="address" class="form-control"}}
+
+    <label for="image-link">image</label>
+    {{input value=image_link id="image_link" class="form-control"}}
+
+    <label for="web-address">web address</label>
+    {{input value=web_address id="web_address" class="form-control"}}
+
+    <div class="row text-center slight-padding-top">
+      <button class="btn btn-default" {{action 'saveCoffeeshop'}}>register shop</button>
+    </div>
+  </form>
+
+</div>
