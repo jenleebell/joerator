@@ -1,0 +1,66 @@
+<div class="content-wrapper container">
+  <div class="title-container">
+    <h1>rate a joe shoppe</h1>
+  </div>
+
+  <form>
+    <ul class="list-inline">
+      {{#each model as |model|}}
+        <li {{action "sendToInput" model}} class="label label-default">{{model.name}}</li>
+      {{/each}}
+    </ul>
+
+    <div class="form-group">
+      <label for="coffeeshop">Choose a coffeeshop from above</label><br>
+      {{input readonly=true value=coffeeshop id="coffeeshop" class="form-control"}}
+    </div>
+
+    <label for="author">name</label>
+    {{input value=author id="author" class="form-control"}}
+
+    <label for="body">body</label>
+    {{textarea value=body id="body" class="form-control"}}
+
+    <label for="title">title</label>
+    {{input value=title id="title" class="form-control"}}
+
+    <label for="studyRating">can you study there?</label><br>
+    <a href="#" {{action 'rateStudy' 1}} >{{fa-icon "coffee"}}</a>
+    <a href="#" {{action 'rateStudy' 2}} >{{fa-icon "coffee"}}</a>
+    <a href="#" {{action 'rateStudy' 3}} >{{fa-icon "coffee"}}</a>
+    <br>
+
+    {{input value=rateStudy class="hidden"}}
+
+    <label for="qualityRating">hows the coffee?</label><br>
+     <a href="#" {{action 'rateQuality' 1}} >{{fa-icon "coffee"}}</a>
+     <a href="#" {{action 'rateQuality' 2}} >{{fa-icon "coffee"}}</a>
+     <a href="#" {{action 'rateQuality' 3}} >{{fa-icon "coffee"}}</a>
+     <br>
+
+     {{input value=rateQuality class="hidden"}}
+
+    <label for="laptopRating">are there outlets?</label><br>
+    <a href="#" {{action 'rateLaptop' 1}} >{{fa-icon "coffee"}}</a>
+    <a href="#" {{action 'rateLaptop' 2}} >{{fa-icon "coffee"}}</a>
+    <a href="#" {{action 'rateLaptop' 3}} >{{fa-icon "coffee"}}</a>
+    <br>
+
+    {{input value=rateLaptop class="hidden"}}
+
+    <label for="hipsterRating">how hipster?</label><br>
+    <a href="#" {{action 'rateHipster' 1}} >{{fa-icon "coffee"}}</a>
+    <a href="#" {{action 'rateHipster' 2}} >{{fa-icon "coffee"}}</a>
+    <a href="#" {{action 'rateHipster' 3}} >{{fa-icon "coffee"}}</a>
+    <br>
+
+    {{input value=rateHipster class="hidden"}}
+
+    <div class="row text-center slight-padding-top">
+      <button class="btn btn-default" {{action 'saveCoffeeshop'}}>review shoppe</button>
+    </div>
+  </form>
+
+</div>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>

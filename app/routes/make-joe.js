@@ -8,7 +8,6 @@ export default Ember.Route.extend({
 
   actions: {
     saveCoffeeshop(params){
-      debugger;
       var newRecord = this.store.createRecord("coffeeshop", params);
       newRecord.save();
       this.transitionTo("index");
