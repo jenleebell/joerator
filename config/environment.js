@@ -15,7 +15,6 @@ module.exports = function(environment) {
       }
     },
 
-
     googleFonts: [
       'Roboto:400,100,700'
     ],
@@ -23,8 +22,10 @@ module.exports = function(environment) {
     // Set or update content security policies
     contentSecurityPolicy: {
       'font-src': "'self' fonts.gstatic.com",
-      'style-src': "'self' fonts.googleapis.com"
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
+      'script-src': "'self' 'unsafe-inline' cdnjs.cloudflare.com/ajax/libs/"
     },
+
 
     APP: {
       // Here you can pass flags/options to your application instance

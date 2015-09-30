@@ -39,6 +39,14 @@ html, html a {
   }
 }
 
+// Masonry
+.item {
+  min-width: 220px;
+  min-height: 300px;
+  margin: 10px;
+  float: left;
+}
+
 // Utility
 .extra-padding-top {
   padding: 10px;
