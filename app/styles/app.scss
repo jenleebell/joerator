@@ -1,0 +1,53 @@
+// Colors
+$black: #000;
+$white: #fff;
+$base: #191919;
+
+
+
+
+// Typography
+
+$small: 12px;
+$medium: 16px;
+$large: 24px;
+$huge: 36px;
+$absurd: 48px;
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, li, dl, dt {
+  letter-spacing: 0.5px;
+}
+
+html, html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+// General
+
+// Utility
+.extra-padding-top {
+  padding: 10px;
+}
+
+// Navbar
+.navbar-default {
+  background-color: $white;
+  border-color: $white;
+
+  li {
+    a {
+      font-size: $large;
+    }
+  }
+}
+/* title */
+
+.navbar-brand img {
+  height: 150px;
+  width: 150px;
+}
