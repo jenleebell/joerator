@@ -10,14 +10,18 @@ $large: 24px;
 $huge: 36px;
 $absurd: 48px;
 
+.coffeeshop-name {
+  font-size: 8rem;
+}
+
 * {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.5px;
+  font-weight: 300;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 
 html, html a {
   -webkit-font-smoothing: antialiased;
@@ -41,10 +45,10 @@ html, html a {
 
 // Masonry
 .item {
-      width:  50px;
-      height: 50px;
-      float: left;
-    }
+  width:  50px;
+  height: 50px;
+  float: left;
+}
 
 .fa-coffee:hover {
   cursor: pointer;
@@ -64,6 +68,10 @@ html, html a {
 
 .slight-padding-top {
   padding: 5px;
+}
+
+.transparent {
+  opacity: .7;
 }
 
 .hidden {
@@ -86,6 +94,7 @@ label {
 .navbar-default {
   background-color: $white;
   border-color: $white;
+  height: 95px;
 
   li {
     a {
@@ -99,21 +108,34 @@ label {
   width: 150px;
 }
 
-
 // All
 .content-container {
   margin-top: 20%;
 }
 
+.coffeeshop-wrapper {
+  margin-top: 3%;
+  padding: 5%;
+  div {
+    margin-top: 2%;
+  }
+}
+
+.mug {
+  font-size: 2rem;
+  font-weight: 300;
+  .fa-coffee {
+    color: darken(gold, 5%);
+    &:hover {
+      cursor: default;
+    }
+  }
+}
 
 
-
-
-
-
-
-
-
+.user-icon {
+  font-size: 3rem;
+}
 
 
 

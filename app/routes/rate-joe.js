@@ -7,9 +7,19 @@ export default Ember.Route.extend({
 
   actions: {
     saveCoffeeshop(params) {
-      var newCoffeeshop = this.store.createRecord("review", params);
-      newCoffeeshop.save();
+      debugger;
+      var newReview = this.store.createRecord("review", params);
+      newReview.save();
+
+      var relatedCoffeeshop = this.store.find('coffeeshop', params.coffeeshop.id).then(function(coffee) {
+        coffee.incrementProperty("qualityRating", params.qualityRating);
+        coffee.incrementProperty("studyRating", params.studyRating);
+        coffee.incrementProperty("laptopRating", params.laptopRating);
+        coffee.incrementProperty("hipsterRating", params.hipsterRating);
+        coffee.save();
+      });
       params.coffeeshop.save();
+
       this.transitionTo('index');
     }
   }

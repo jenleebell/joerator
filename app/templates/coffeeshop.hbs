@@ -1,4 +1,138 @@
-<div class="coffeeshop-content-container">
-  <img src={{model.image_link}} />
-  <h1>{{model.name}}</h1>
+<div class="coffeeshop-wrapper container-fluid">
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1 class="coffeeshop-name">{{model.name}}</h1>
+      <h1>{{allQualityRatings}}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-7">
+      <img src={{model.image_link}} class="img-responsive transparent" />
+    </div>
+    <div class="col-md-5">
+      <h3>overall ratings</h3>
+      {{#each model.qualityRating as |number|}}
+        <span class="mug">{{fa-icon "coffee"}}</span>
+      {{/each}}
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <span class="mug"> - coffee quality</span>
+      <br>
+
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <b class="mug"> - study</b>
+      <br>
+
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <b class="mug"> - outlet availability</b>
+      <br>
+
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <span href="#" class="mug">{{fa-icon "coffee"}}</span>
+      <b class="mug"> - hipster</b>
+      <br>
+
+    </div>
+  </div>
+
+  <hr>
+  <h3>shoppe information</h3>
+
+  <div class="container">
+    <div class="col-md-3">
+      <p class="lead">
+        <address>
+          {{model.address}}
+        </address>
+      </p>
+    </div>
+
+    <div class="map-container col-md-9">
+      <iframe width="300" height="300" frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?q={{format-address model.address}}&key=AIzaSyC7refRsrpNaOI9TrGEuhjJmI9bJAi1yI0"></iframe>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="rating-box">
+    <h3>reviews</h3>
+    {{#each sortedReviews as |review|}}
+    <div class="media">
+      <div class="media-left media-top">
+        <span class="user-icon" >{{fa-icon "user"}}</span>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{review.title}}
+        <br>
+        <em>{{review.author}}</em> - {{moment-from-now review.created_at}}</h4>
+        <p class="lead">{{review.body}}</p>
+        <p class="lead"><b>quality</b> {{review.qualityRating}} | <b>study</b> {{review.studyRating}} | <b>laptopRating</b> {{review.laptopRating}} |
+          <b>hipster</b> {{review.hipsterRating}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+
+<!--
+  import DS from 'ember-data';
+
+  export default DS.Model.extend({
+    author: DS.attr(),
+    body: DS.attr(),
+    title: DS.attr(),
+    qualityRating: DS.attr(),
+    studyRating: DS.attr(),
+    laptopRating: DS.attr(),
+    hipsterRating: DS.attr(),
+    created_at: DS.attr(),
+    edited_at: DS.attr(),
+    coffeeshop: DS.belongsTo('coffeeshop', { aysnc: true})
+  });
+ -->
+
+
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->
