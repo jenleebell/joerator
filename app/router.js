@@ -9,6 +9,8 @@ Router.map(function() {
   this.route('about');
   this.route('make-joe');
   this.route('rate-joe');
+  this.route('coffeeshop', { path: '/coffeeshop/:coffeeshop_id'} );
+  this.route('all');
 });
 
 export default Router;

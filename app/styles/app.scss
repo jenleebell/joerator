@@ -3,11 +3,7 @@ $black: #000;
 $white: #fff;
 $base: #2E2E2E;
 
-
-
-
 // Typography
-
 $small: 12px;
 $medium: 16px;
 $large: 24px;
@@ -17,7 +13,11 @@ $absurd: 48px;
 * {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 
 html, html a {
   -webkit-font-smoothing: antialiased;
@@ -41,10 +41,10 @@ html, html a {
 
 // Masonry
 .item {
-  // margin: 5px;
-  float: left;
-}
-
+      width:  50px;
+      height: 50px;
+      float: left;
+    }
 
 .fa-coffee:hover {
   cursor: pointer;
@@ -56,32 +56,6 @@ html, html a {
   opacity: .8;
   transform: scale(1.1);
 }
-
-
-// #front-hipster {
-//   width: 500px;
-//   height: 100%;
-// }
-//
-// #front-laptop {
-//   height: 800px;
-//   width: 100%;
-// }
-// #front-coffee-quality {
-//   height: 640px;
-//   width: 100%;
-// }
-// #front-study {
-//   height: 290px;
-//   width: 100%;
-// }
-
-
-// img {
-//   max-height: 600px;
-//   max-width: 200px;
-//   padding: 1%;
-// }
 
 // Utility
 .extra-padding-top {
@@ -107,9 +81,6 @@ form {
 label {
   margin-top: 10px;
 }
-// .form-control {
-//   width: 50%;
-// }
 
 // Navbar
 .navbar-default {
@@ -127,3 +98,27 @@ label {
   height: 150px;
   width: 150px;
 }
+
+
+// All
+.content-container {
+  margin-top: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

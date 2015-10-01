@@ -30,15 +30,11 @@
     <a href="#" {{action 'rateStudy' 3}} >{{fa-icon "coffee"}}</a>
     <br>
 
-    {{input value=rateStudy class="hidden"}}
-
     <label for="qualityRating">hows the coffee?</label><br>
      <a href="#" {{action 'rateQuality' 1}} >{{fa-icon "coffee"}}</a>
      <a href="#" {{action 'rateQuality' 2}} >{{fa-icon "coffee"}}</a>
      <a href="#" {{action 'rateQuality' 3}} >{{fa-icon "coffee"}}</a>
      <br>
-
-     {{input value=rateQuality class="hidden"}}
 
     <label for="laptopRating">are there outlets?</label><br>
     <a href="#" {{action 'rateLaptop' 1}} >{{fa-icon "coffee"}}</a>
@@ -46,15 +42,11 @@
     <a href="#" {{action 'rateLaptop' 3}} >{{fa-icon "coffee"}}</a>
     <br>
 
-    {{input value=rateLaptop class="hidden"}}
-
     <label for="hipsterRating">how hipster?</label><br>
     <a href="#" {{action 'rateHipster' 1}} >{{fa-icon "coffee"}}</a>
     <a href="#" {{action 'rateHipster' 2}} >{{fa-icon "coffee"}}</a>
     <a href="#" {{action 'rateHipster' 3}} >{{fa-icon "coffee"}}</a>
     <br>
-
-    {{input value=rateHipster class="hidden"}}
 
     <div class="row text-center slight-padding-top">
       <button class="btn btn-default" {{action 'saveCoffeeshop'}}>review shoppe</button>
