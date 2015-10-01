@@ -3,19 +3,19 @@
   <div class="row">
     <div class="col-md-12 text-center">
       <h1 class="coffeeshop-name">{{model.name}}</h1>
-      <h1>{{allQualityRatings}}</h1>
+      <h1>{{average-rating model}}</h1>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-7">
-      <img src={{model.image_link}} class="img-responsive transparent" />
+      <img src={{model.image_link}} class="img-responsive transparent">
     </div>
     <div class="col-md-5">
       <h3>overall ratings</h3>
-      {{#each model.qualityRating as |number|}}
-        <span class="mug">{{fa-icon "coffee"}}</span>
-      {{/each}}
+      <p>
+
+      </p>
       <span href="#" class="mug">{{fa-icon "coffee"}}</span>
       <span href="#" class="mug">{{fa-icon "coffee"}}</span>
       <span href="#" class="mug">{{fa-icon "coffee"}}</span>
@@ -65,7 +65,7 @@
 
   <div class="rating-box">
     <h3>reviews</h3>
-    {{#each sortedReviews as |review|}}
+    <!-- {{#each sortedReviews as |review|}}
     <div class="media">
       <div class="media-left media-top">
         <span class="user-icon" >{{fa-icon "user"}}</span>
@@ -79,7 +79,24 @@
           <b>hipster</b> {{review.hipsterRating}}</p>
       </div>
     </div>
-    {{/each}}
+    {{/each}} -->
+    <div class="rating-box container text-center">
+      <h3>reviews</h3>
+      {{#each sortedReviews as |review|}}
+        <div class="row">
+          <div class="col-xs-2 text-right">
+            <span class="user-icon" >{{fa-icon "user"}}</span>
+            <h4 class="media-heading">{{review.author}}</h4>
+          </div>
+          <div class="col-xs-10 text-left">
+            <em>{{review.title}}</em> - {{moment-from-now review.created_at}}
+            <p class="lead">{{review.body}}</p>
+            <p class="lead"><b>quality</b> {{review.qualityRating}} | <b>study</b> {{review.studyRating}} | <b>laptopRating</b> {{review.laptopRating}} |
+              <b>hipster</b> {{review.hipsterRating}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
   </div>
 
 

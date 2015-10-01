@@ -11,5 +11,6 @@ export default DS.Model.extend({
   created_at: DS.attr(),
   edited_at: DS.attr(),
   image_link: DS.attr(),
-  web_address: DS.attr()
+  web_address: DS.attr(),
+  numOfReviews: DS.attr()
 });

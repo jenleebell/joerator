@@ -44,21 +44,46 @@ html, html a {
 }
 
 // Masonry
-.item {
-  width:  50px;
-  height: 50px;
+// .item {
+//   width: 490px !important;
+//   height: auto !important;
+//   float: left;
+//   &:hover {
+//     cursor: pointer;
+//     opacity: .9;
+//     transform: scale(1.09);
+//   }
+// }
+
+.grid-item {
+  width: 160px;
+  height: 120px;
   float: left;
+
 }
+
+
+
+.grid-item:hover {
+  background: #A2C;
+  border-color: white;
+  cursor: pointer;
+}
+
+// .item {
+//   width: 490px !important;
+//   height: auto !important;
+//   float: left;
+//   &:hover {
+//     cursor: pointer;
+//     opacity: .9;
+//     transform: scale(1.09);
+//   }
+// }
 
 .fa-coffee:hover {
   cursor: pointer;
   color: darken(gold, 5%);
-}
-
-#front-hipster:hover {
-  cursor: pointer;
-  opacity: .8;
-  transform: scale(1.1);
 }
 
 // Utility
@@ -131,7 +156,6 @@ label {
     }
   }
 }
-
 
 .user-icon {
   font-size: 3rem;

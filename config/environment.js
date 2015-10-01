@@ -26,7 +26,6 @@ module.exports = function(environment) {
       'script-src': "'self' 'unsafe-inline' cdnjs.cloudflare.com/ajax/libs/"
     },
 
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

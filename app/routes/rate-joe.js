@@ -16,6 +16,7 @@ export default Ember.Route.extend({
         coffee.incrementProperty("studyRating", params.studyRating);
         coffee.incrementProperty("laptopRating", params.laptopRating);
         coffee.incrementProperty("hipsterRating", params.hipsterRating);
+        coffee.incrementProperty("numOfReviews");
         coffee.save();
       });
       params.coffeeshop.save();
